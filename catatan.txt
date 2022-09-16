@@ -1,0 +1,42 @@
+cara menjalankan server local laravel;
+php artisan serve
+
+cara membuat controller menggunkan cli:
+php artisan make:contoller NamaContoller
+
+route->controller->view
+
+cara membuat login otomatis:
+- Breze : Tailwind CSS, Inertia
+- Jetstream : Livewire, Tailwind CSS, Inertia
+- Larave UI : Bootstrap, Vue, React
+untuk auth menggunakan laravel ui:
+composer require laravel/uifas
+php artisan ui bootstrap --auth
+npm intall
+npm run dev
+
+untuk mengecek route yang ada di project laravel:
+php artisan route:list
+
+untuk melakukan migrati data base :
+php artisan migrate
+php artisan make:migration create_products_table
+
+untuk membuat contoller :
+php artisan make:controller ProductController
+php artisan make:controller StudentController -r
+
+membuat model ;
+php artisan make:model Product
+
+untuk membuat model dengan model, contorller resouces, migration:
+php artisan make:model Product -m -c -r
+php artisan make:model Product -mcr
+
+
+API/ProductAPIController.php
+
+php artisan make:controller API/ProductAPIController
+
+php artisan make:middleware NamaMiddleware

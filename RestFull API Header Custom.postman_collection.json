@@ -1,0 +1,1596 @@
+{
+	"info": {
+		"_postman_id": "5d3a9fcd-b230-4f9f-a70d-a9d68040322d",
+		"name": "RestFull API Header Custom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11358474"
+	},
+	"item": [
+		{
+			"name": "All data Product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|FDSdPIUnffL01Ls6acdm3Nbn7xbMae8QEaHJ5J7h",
+						"type": "text"
+					},
+					{
+						"key": "X-PARTNER-ID",
+						"value": "123456",
+						"type": "text"
+					},
+					{
+						"key": "X-SIGNATURE",
+						"value": "123456",
+						"type": "text"
+					},
+					{
+						"key": "X-EXTERNAL-ID",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlApi}}/api/products",
+					"host": [
+						"{{urlApi}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ALL DATA PRODUCTS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlApi}}/api/products",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 02:40:09 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 02:40:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Uniqlo\",\n            \"price\": 20,\n            \"image\": \"20220916021735.PNG\",\n            \"deleted_at\": null,\n            \"created_at\": \"2022-09-15T03:42:01.000000Z\",\n            \"updated_at\": \"2022-09-16T02:17:35.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"fasdfsadf\",\n            \"price\": 213123,\n            \"image\": \"20220915034404.png\",\n            \"deleted_at\": null,\n            \"created_at\": \"2022-09-15T03:44:04.000000Z\",\n            \"updated_at\": \"2022-09-15T07:48:46.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Logitech Mouse Side Style\",\n            \"price\": 12,\n            \"image\": \"20220915073840.png\",\n            \"deleted_at\": null,\n            \"created_at\": \"2022-09-15T07:38:40.000000Z\",\n            \"updated_at\": \"2022-09-15T07:44:32.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"fsfgs\",\n            \"price\": 4234234,\n            \"image\": \"20220915082659.png\",\n            \"deleted_at\": null,\n            \"created_at\": \"2022-09-15T08:26:59.000000Z\",\n            \"updated_at\": \"2022-09-15T08:26:59.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Addidas\",\n            \"price\": 12,\n            \"image\": \"20220915082848.PNG\",\n            \"deleted_at\": null,\n            \"created_at\": \"2022-09-15T08:28:48.000000Z\",\n            \"updated_at\": \"2022-09-15T08:28:48.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Mac Book Pro M1",
+							"description": "nama ini hrs string max 255",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/INIXINDO/Pictures/Capture.PNG"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{urlApi}}/api/products",
+					"host": [
+						"{{urlApi}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Error Add Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlApi}}/api/products",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 02:50:44 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 02:50:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The name field is required. (and 2 more errors)\",\n    \"errors\": {\n        \"name\": [\n            \"The name field is required.\"\n        ],\n        \"price\": [\n            \"The price field is required.\"\n        ],\n        \"image\": [\n            \"The image field is required.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Add Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Mac Book Pro M1",
+									"description": "nama ini hrs string max 255",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/INIXINDO/Pictures/Capture.PNG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlApi}}/api/products",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 02:55:12 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 02:55:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Data berhasil ditambahkan\",\n    \"data\": {\n        \"name\": \"Mac Book Pro M1\",\n        \"price\": \"1000\",\n        \"image\": \"20220916025512.PNG\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Detail Product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlApi}}/api/products/89",
+					"host": [
+						"{{urlApi}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"89"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Detail Product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlApi}}/api/products/10",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:05:05 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:05:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Data berhasil ditemukan\",\n    \"data\": {\n        \"id\": 10,\n        \"name\": \"Mac Book Pro M1\",\n        \"price\": 1000,\n        \"image\": \"20220916025512.PNG\",\n        \"deleted_at\": null,\n        \"created_at\": \"2022-09-16T02:55:12.000000Z\",\n        \"updated_at\": \"2022-09-16T02:55:12.000000Z\"\n    }\n}"
+				},
+				{
+					"name": "Error Detail Product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlApi}}/api/products/89",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"89"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:06:50 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:06:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 404,\n    \"message\": \"Data tidak ditemukan\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Macbook Air M1\",\r\n    \"price\": 75\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlApi}}/api/products/10",
+					"host": [
+						"{{urlApi}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"10"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Product",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Macbook Air M1\",\r\n    \"price\": 75\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlApi}}/api/products/10",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:21:59 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:21:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Data berhasil diupdate\",\n    \"data\": {\n        \"name\": \"Macbook Air M1\",\n        \"price\": 75\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlApi}}/api/products/10",
+					"host": [
+						"{{urlApi}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"10"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Product",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlApi}}/api/products/10",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:26:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:26:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Data berhasil dihapus\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "isan",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "isan@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "admin123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{urlApi}}/api/register",
+					"host": [
+						"{{urlApi}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Error Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "isan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "isan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "admin1232",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlApi}}/api/register",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:49:52 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:49:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The password confirmation does not match.\",\n    \"errors\": {\n        \"password\": [\n            \"The password confirmation does not match.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "isan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "isan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "admin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlApi}}/api/register",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:50:40 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:50:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"name\": \"isan\",\n        \"email\": \"isan@gmail.com\",\n        \"updated_at\": \"2022-09-16T03:50:40.000000Z\",\n        \"created_at\": \"2022-09-16T03:50:40.000000Z\",\n        \"id\": 2\n    },\n    \"token\": \"1|X6L16JL8pyXjXoMEOrdS9gO0DxWZzQhKEl9UYJCb\",\n    \"token_type\": \"Bearer\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "isan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "isan@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "admin123",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{urlApi}}/api/login",
+					"host": [
+						"{{urlApi}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "isan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlApi}}/api/login",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:57:24 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:57:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"isan\",\n        \"email\": \"isan@gmail.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2022-09-16T03:50:40.000000Z\",\n        \"updated_at\": \"2022-09-16T03:50:40.000000Z\"\n    },\n    \"token\": \"2|E9iSK41nx5yTSyR2uZEifAHq4BCYcDSXw8u7W3te\",\n    \"token_type\": \"Bearer\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get product with header",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 2|E9iSK41nx5yTSyR2uZEifAHq4BCYcDSXw8u7W3te",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{urlApi}}/api/products",
+					"host": [
+						"{{urlApi}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "isan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlApi}}/api/login",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:57:24 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 03:57:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"isan\",\n        \"email\": \"isan@gmail.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2022-09-16T03:50:40.000000Z\",\n        \"updated_at\": \"2022-09-16T03:50:40.000000Z\"\n    },\n    \"token\": \"2|E9iSK41nx5yTSyR2uZEifAHq4BCYcDSXw8u7W3te\",\n    \"token_type\": \"Bearer\"\n}"
+				},
+				{
+					"name": "error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{urlApi}}/api/products",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 04:02:22 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 04:02:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+				},
+				{
+					"name": "get product with header",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|E9iSK41nx5yTSyR2uZEifAHq4BCYcDSXw8u7W3te",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{urlApi}}/api/products",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 04:03:35 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 04:03:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Uniqlo\",\n            \"price\": 20,\n            \"image\": \"20220916021735.PNG\",\n            \"deleted_at\": null,\n            \"created_at\": \"2022-09-15T03:42:01.000000Z\",\n            \"updated_at\": \"2022-09-16T02:17:35.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"fasdfsadf\",\n            \"price\": 213123,\n            \"image\": \"20220915034404.png\",\n            \"deleted_at\": null,\n            \"created_at\": \"2022-09-15T03:44:04.000000Z\",\n            \"updated_at\": \"2022-09-15T07:48:46.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Logitech Mouse Side Style\",\n            \"price\": 12,\n            \"image\": \"20220915073840.png\",\n            \"deleted_at\": null,\n            \"created_at\": \"2022-09-15T07:38:40.000000Z\",\n            \"updated_at\": \"2022-09-15T07:44:32.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"fsfgs\",\n            \"price\": 4234234,\n            \"image\": \"20220915082659.png\",\n            \"deleted_at\": null,\n            \"created_at\": \"2022-09-15T08:26:59.000000Z\",\n            \"updated_at\": \"2022-09-15T08:26:59.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Addidas\",\n            \"price\": 12,\n            \"image\": \"20220915082848.PNG\",\n            \"deleted_at\": null,\n            \"created_at\": \"2022-09-15T08:28:48.000000Z\",\n            \"updated_at\": \"2022-09-15T08:28:48.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Detail user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|FDSdPIUnffL01Ls6acdm3Nbn7xbMae8QEaHJ5J7h",
+						"type": "text"
+					},
+					{
+						"key": "X-SIGNATURE",
+						"value": "123456",
+						"type": "text"
+					},
+					{
+						"key": "X-PARTNER-ID",
+						"value": "123456",
+						"type": "text"
+					},
+					{
+						"key": "X-EXTERNAL-ID",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlApi}}/api/user",
+					"host": [
+						"{{urlApi}}"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Detail user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|FDSdPIUnffL01Ls6acdm3Nbn7xbMae8QEaHJ5J7h",
+								"type": "text"
+							},
+							{
+								"key": "X-SIGNATURE",
+								"value": "123456",
+								"type": "text"
+							},
+							{
+								"key": "X-PARTNER-ID",
+								"value": "123456",
+								"type": "text"
+							},
+							{
+								"key": "X-EXTERNAL-ID",
+								"value": "123456",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlApi}}/api/user",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 05:33:17 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 05:33:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "55"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"isan\",\n        \"email\": \"isan@gmail.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2022-09-16T03:50:40.000000Z\",\n        \"updated_at\": \"2022-09-16T03:50:40.000000Z\"\n    },\n    \"status\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 2|E9iSK41nx5yTSyR2uZEifAHq4BCYcDSXw8u7W3te",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{urlApi}}/api/logout",
+					"host": [
+						"{{urlApi}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|E9iSK41nx5yTSyR2uZEifAHq4BCYcDSXw8u7W3te",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{urlApi}}/api/logout",
+							"host": [
+								"{{urlApi}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 04:20:28 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 04:20:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Logged out\",\n    \"status\": 200\n}"
+				}
+			]
+		}
+	]
+}
